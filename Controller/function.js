@@ -83,7 +83,6 @@ const getUser = async(req,res)=>{
 }
 const getAllUser = async(req,res)=>{
   try{
-    const id = req.params.id;
     const allUsers = await Sign.findAll();
       if(!allUsers) {
         return res.status(404).json({message:"Data Not Found"});
